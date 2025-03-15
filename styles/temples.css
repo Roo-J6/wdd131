@@ -1,0 +1,67 @@
+/* temples.css - Mobile First Design */
+
+body {
+    font-family: 'Microsoft san serif', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #34495e;
+    padding: px 8px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+figure {
+    margin: 20px 0;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    margin-top: 20px;
+}

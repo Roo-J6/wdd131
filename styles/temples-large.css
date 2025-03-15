@@ -1,0 +1,19 @@
+/* temples-large.css - Larger View Styles */
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main {
+        max-width: 1200px;
+    }
+
+    .temple-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+}

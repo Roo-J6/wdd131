@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temple Album">
+    <meta name="author" content="Ekponoabasi Rufus Udofia">
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu-button">☰</button>
+        <nav id="nav-menu">
+            <a href="#" data-filter="home">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>   
+        </nav>
+    </header>
+    <main>
+        <h1>Temples</h1>
+        <section class="temple-grid">
+            <figure data-type="old">
+                <img src="images/aba.jpg" alt="Aba Nigeria Temple">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure data-type="new">
+                <img src="images/salt.png" alt="Salt Lake Temple">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure data-type="large">
+                <img src="images/wash.png" alt="Washington DC Temple">
+                <figcaption>Washington DC Temple</figcaption>
+            </figure>
+            <figure data-type="small">
+                <img src="images/lagos.jpg" alt="Lagos Temple">
+                <figcaption>Lagos Temple</figcaption>
+            </figure>
+            <figure data-type="old">
+                <img src="images/Stgeorge.jpg" alt="St. George Utah Temple">
+                <figcaption>St. George Utah Temple</figcaption>
+            </figure>
+            <figure data-type="new">
+                <img src="images/rome.jpg" alt="Rome Italy Temple">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure data-type="large">
+                <img src="images/manila.jpg" alt="Manila Philippines Temple">
+                <figcaption>Manila Philippines Temple</figcaption>
+            </figure>
+            <figure data-type="small">
+                <img src="images/accraghana.jpg" alt="Accra Ghana Temple">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+            <figure data-type="new">
+                <img src="images/paris.jpg" alt="Paris France Temple">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Ekponoabasi Rufus Udofia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
