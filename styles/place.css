@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #5f1a07;
+    --secondary-color: #ecf0ed;
+    --text-color: #333;
+    --accent-color: #ba7038;
+}
+
+body {
+    font-family: High Tower, High Tower;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.data, .weather {
+    position: absolute;
+    width: 20%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Keeps Data section at the top-left of hero image */
+.data {
+    top: 5%;
+    left: 5%;
+}
+
+/* Moves Weather section down to bottom of hero image */
+.weather {
+    top: 70%;  /* Adjusted so it appears towards the bottom of the hero image */
+    right: 5%;
+    width: 25%; /* Increased width for better visibility */
+}
+
+.weather h2::after {
+    content: ' ⛅';
+}
+
+.mobile-icon {
+    display: none;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .data, .weather {
+        position: static;
+        width: auto;
+    }
+
+    .mobile-icon {
+        display: inline;
+    }
+}
