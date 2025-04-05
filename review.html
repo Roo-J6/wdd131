@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <header>
+    <h1>Review Confirmation</h1>
+  </header>
+
+  <div id="review-details"></div>
+
+  <footer>
+    <p>Reviews Submitted: <span id="review-count">0</span></p>
+    <p>© 2025 Product Review Form</p>
+  </footer>
+
+  <script>
+    // Get the number of reviews from localStorage
+    let reviewCount = localStorage.getItem('reviewCount') || 0;
+    reviewCount = parseInt(reviewCount) + 1;
+    localStorage.setItem('reviewCount', reviewCount);
+
+    // Display review count
+    document.getElementById('review-count').textContent = reviewCount;
+
+    // Display submitted review details
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product');
+    const rating = params.get('rating');
+    const installationDate = params.get('installation-date');
+    const features = params.getAll('features');
+    const review = params.get('review');
+    const userName = params.get('user-name') || 'Anonymous';
+
+    const reviewDetails = `
+      <h2>Thank you for your review, ${userName}!</h2>
+      <p><strong>Product:</strong> ${product}</p>
+      <p><strong>Rating:</strong> ${rating} stars</p>
+      <p><strong>Date of Installation:</strong> ${installationDate}</p>
+      <p><strong>Useful Features:</strong> ${features.join(', ')}</p>
+      <p><strong>Review:</strong> ${review || 'No review provided.'}</p>
+    `;
+    document.getElementById('review-details').innerHTML = reviewDetails;
+  </script>
+</body>
+</html>
